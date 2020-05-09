@@ -5,6 +5,8 @@ public class Solution {
 	public static int solution(int[] l) {
 		Arrays.sort(l);
 
+		l = Arrays.stream(l).filter(s -> s >= 0).toArray();
+		
 		int count = 0;
 		for (int i = 0; i < l.length; i++) {
 			for (int j = i + 1; j < l.length; j++) {
