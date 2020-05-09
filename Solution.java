@@ -1,11 +1,8 @@
 import java.util.Arrays;
-
 public class Solution {
-
-	public static int solution(int[] l) {
-		Arrays.sort(l);
-
-		l = Arrays.stream(l).filter(s -> s >= 0).toArray();
+    public static int solution(int[] l) {
+        
+        l = Arrays.stream(l).filter(s -> s >= 0).toArray();
 		
 		int count = 0;
 		for (int i = 0; i < l.length; i++) {
@@ -30,14 +27,4 @@ public class Solution {
 
 		return count;
 	}
-
-	public static void main(String[] args) {
-		int[] x = { 1, 2, 3, 4, 5, 6 };
-		int[] y = { 1, 1, 1 };
-
-		int result = solution(y);
-		System.out.println(result);
-	}
-
 }
-
